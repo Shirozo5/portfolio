@@ -17,6 +17,6 @@ To change text, edit `index.html`. To change colors or fonts, edit the two `:roo
 1. On GitHub, create a new public repository. Name it `portfolio`, or `your-username.github.io` if you want the shorter address `https://your-username.github.io/`.
 2. Upload `index.html`, `style.css` and `script.js` (plus the `files/` folder if you added a resume) to the root of the repository.
 3. Go to the repository's Settings, then Pages. Under "Build and deployment", set Source to "Deploy from a branch", choose the `main` branch and the `/ (root)` folder, and save.
-4. After a minute or two the site is live at `https://your-username.github.io/portfolio/`.
+4. After a minute or two the site is live at `https://shirozo5.github.io/portfolio/`.
 
 Every time you commit a change, GitHub Pages republishes the site.
