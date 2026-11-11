@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Abdullah | Python data analyst</title>
+  <meta name="description" content="Muhammad Abdullah is a software engineering graduate who cleans, analyses and reports on data with Python and Excel. See projects, skills and how to get in touch.">
+  <meta name="theme-color" content="#f3f5f8">
+  <meta property="og:title" content="Muhammad Abdullah | Python data analyst">
+  <meta property="og:description" content="Data cleaning, analysis and reporting with Python and Excel.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2233'/%3E%3Cpath d='M14 46V18l18 20 18-20v28' fill='none' stroke='%23ffe14d' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Apply a saved theme before the page paints, to avoid a flash -->
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#home" aria-label="Home">MA</a>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="bar-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Home -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 id="hero-title"><span class="hello">Hello, I'm</span><span class="name">Muhammad Abdullah</span></h1>
+          <p class="role">I'm a data analyst,
+            <span class="swap" id="swap">cleaning messy spreadsheets</span>
+          </p>
+          <p class="lead">I work in Python and Excel, and I write up what the data says so you can act on it. Software engineering graduate, based in Istanbul.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn btn-hi" data-cv href="#" hidden>Download CV</a>
+          </div>
+        </div>
+
+        <figure class="demo" aria-labelledby="demo-title">
+          <div class="demo-head">
+            <span id="demo-title">orders.csv</span>
+            <button class="btn btn-hi btn-sm" id="demo-btn" type="button" hidden>Fix customer names</button>
+          </div>
+          <div class="demo-scroll">
+            <table class="grid">
+              <thead>
+                <tr><th scope="col">id</th><th scope="col">customer</th><th scope="col">date</th><th scope="col">amount</th></tr>
+              </thead>
+              <tbody id="demo-body">
+                <tr><td>1001</td><td>  ayesha KHAN</td><td>03/14/2026</td><td>1,250</td></tr>
+                <tr><td>1002</td><td>Bilal Ahmed </td><td>2026-03-15</td><td>980</td></tr>
+                <tr><td>1003</td><td>sara  malik</td><td>15 Mar 2026</td><td>PKR 2,400</td></tr>
+                <tr><td>1004</td><td>USMAN tariq</td><td>2026-03-16</td><td></td></tr>
+                <tr><td>1005</td><td>zain  ali </td><td>March 17, 2026</td><td>3,100</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="demo-status" id="demo-status" aria-live="polite">Five rows, four kinds of mess. Fix them one step at a time.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="block" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div>
+            <h2 id="about-title">About me</h2>
+            <p>I'm a software engineering graduate from Hazara University Mansehra, working as a freelance Python data analyst based in Istanbul.</p>
+            <p>I help people whose data is messy, incomplete or hard to use. I clean it, answer the question you actually have, and hand it back in a form you can keep working with.</p>
+            <p>I also build software. My final-year project, Echo Notes, turns recorded meetings into searchable notes, and I interned at NovaXccelerate on audio-to-text transcription of calls.</p>
+          </div>
+          <div class="profile-card">
+            <dl>
+              <div><dt>Based in</dt><dd>Istanbul, Türkiye</dd></div>
+              <div><dt>Education</dt><dd>BS Software Engineering, Hazara University Mansehra, 2026</dd></div>
+              <div><dt>Tools</dt><dd>Python, pandas, Excel, SQL</dd></div>
+              <div><dt>English</dt><dd>IELTS 7.0</dd></div>
+            </dl>
+            <div class="profile-links">
+              <a data-social="github" href="#" hidden>GitHub</a>
+              <a data-social="linkedin" href="#" hidden>LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="steps-title">How we'd work together</h3>
+        <ol class="steps">
+          <li>
+            <span class="step-n" aria-hidden="true">1</span>
+            <h4>You send the data</h4>
+            <p>A file or export, plus the question you want answered.</p>
+          </li>
+          <li>
+            <span class="step-n" aria-hidden="true">2</span>
+            <h4>I check and clean it</h4>
+            <p>I fix formats and duplicates, and flag anything I can't fix without guessing.</p>
+          </li>
+          <li>
+            <span class="step-n" aria-hidden="true">3</span>
+            <h4>I analyse it</h4>
+            <p>In Python, Excel or SQL, whichever suits the job.</p>
+          </li>
+          <li>
+            <span class="step-n" aria-hidden="true">4</span>
+            <h4>You get the result</h4>
+            <p>Clean files, charts, a short written summary and notes on what I changed.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="block" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div>
+          <div class="skill-row">
+            <h3>Data analysis</h3>
+            <ul class="cells">
+              <li>Python</li><li>pandas</li><li>NumPy</li><li>Excel</li><li>SQL</li><li>SQLite</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Cleaning and reporting</h3>
+            <ul class="cells">
+              <li>Fixing inconsistent data</li><li>Handling missing values</li><li>Summary tables</li><li>Charts</li><li>Written reports</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Machine learning</h3>
+            <ul class="cells">
+              <li data-tag="whisper">Whisper speech-to-text</li><li data-tag="pyannote.audio">Speaker separation with pyannote.audio</li><li data-tag="gemini 1.5 flash">Gemini API</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Apps and backend</h3>
+            <ul class="cells">
+              <li>Flutter</li><li>FastAPI</li><li>Supabase</li><li>Row-level security</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Tools</h3>
+            <ul class="cells">
+              <li>GitHub</li><li>Cloudflare Pages</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-used" id="skill-used" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="block" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="services-title">Services</h2>
+          <p>What I can take off your plate. Pick one to see an example.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-tabs" role="tablist" aria-label="Services" aria-orientation="vertical" hidden>
+          <button class="svc-tab" id="svc-tab-1" type="button" role="tab" aria-selected="true" aria-controls="svc-panel-1" tabindex="0">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span>
+            <span class="svc-tab-text"><span class="svc-tab-title">Data cleaning</span><span class="svc-tab-desc">Fix inconsistent dates, names and numbers, remove duplicates, and flag what can't be fixed instead of guessing.</span></span>
+          </button>
+          <button class="svc-tab" id="svc-tab-2" type="button" role="tab" aria-selected="false" aria-controls="svc-panel-2" tabindex="-1">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>
+            <span class="svc-tab-text"><span class="svc-tab-title">Analysis and reports</span><span class="svc-tab-desc">Answer a specific question from your data and deliver a short written summary with charts.</span></span>
+          </button>
+          <button class="svc-tab" id="svc-tab-3" type="button" role="tab" aria-selected="false" aria-controls="svc-panel-3" tabindex="-1">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+            <span class="svc-tab-text"><span class="svc-tab-title">Excel and SQL work</span><span class="svc-tab-desc">Build spreadsheets, formulas and queries that your team can keep using after I'm done.</span></span>
+          </button>
+          <button class="svc-tab" id="svc-tab-4" type="button" role="tab" aria-selected="false" aria-controls="svc-panel-4" tabindex="-1">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM6 11a6 6 0 0 0 12 0M12 17v4"/></svg></span>
+            <span class="svc-tab-text"><span class="svc-tab-title">Transcription tools</span><span class="svc-tab-desc">Turn recorded calls and meetings into text with Whisper-based speech-to-text.</span></span>
+          </button>
+          </div>
+          <div class="svc-panels">
+          <div class="svc-panel" id="svc-panel-1" role="tabpanel" aria-labelledby="svc-tab-1">
+            <h3 class="svc-panel-title">Data cleaning</h3>
+            <p class="svc-example-label">Example</p>
+            <div class="svc-demo">
+            <div class="mini">
+              <div class="mini-row"><span>before</span><code>  ayesha KHAN | 03/14/2026 | 1,250</code></div>
+              <div class="mini-row"><span>after</span><code>Ayesha Khan | 2026-03-14 | 1250</code></div>
+              <div class="mini-row is-flag"><span>flag</span><code>1004 | amount is blank, please confirm</code></div>
+            </div>
+            </div>
+            <p class="get-title">What you get</p>
+            <ul class="get">
+              <li>A clean file that is ready to use</li>
+              <li>A list of every change I made</li>
+              <li>A short list of values to confirm with you</li>
+            </ul>
+          </div>
+          <div class="svc-panel" id="svc-panel-2" role="tabpanel" aria-labelledby="svc-tab-2">
+            <h3 class="svc-panel-title">Analysis and reports</h3>
+            <p class="svc-example-label">Example</p>
+            <div class="svc-demo">
+            <div class="fig"><svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <path class="soft" d="M28 86h260"/>
+                <rect class="fill-line" x="40" y="56" width="28" height="30" rx="3"/>
+                <rect class="fill-line" x="80" y="44" width="28" height="42" rx="3"/>
+                <rect class="fill-line" x="120" y="50" width="28" height="36" rx="3"/>
+                <rect class="ink fill-hi" x="160" y="22" width="28" height="64" rx="3"/>
+                <rect class="fill-line" x="200" y="40" width="28" height="46" rx="3"/>
+                <rect class="fill-line" x="240" y="58" width="28" height="28" rx="3"/>
+              </svg></div>
+            <div class="mini">
+              <div class="mini-row"><span>question</span><code>Which customers are most likely to leave?</code></div>
+              <div class="mini-row"><span>answer</span><code>A chart, a short summary and the numbers behind it</code></div>
+            </div>
+            </div>
+            <p class="get-title">What you get</p>
+            <ul class="get">
+              <li>One clear answer to your question</li>
+              <li>Charts that show it at a glance</li>
+              <li>A short summary you can forward</li>
+            </ul>
+          </div>
+          <div class="svc-panel" id="svc-panel-3" role="tabpanel" aria-labelledby="svc-tab-3">
+            <h3 class="svc-panel-title">Excel and SQL work</h3>
+            <p class="svc-example-label">Example</p>
+            <div class="svc-demo">
+            <pre class="code">SELECT category, SUM(amount) AS revenue
+FROM orders
+GROUP BY category
+ORDER BY revenue DESC;</pre>
+            </div>
+            <p class="get-title">What you get</p>
+            <ul class="get">
+              <li>Spreadsheets or queries that work</li>
+              <li>Plain-language notes on how they work</li>
+              <li>Files you can change yourself later</li>
+            </ul>
+          </div>
+          <div class="svc-panel" id="svc-panel-4" role="tabpanel" aria-labelledby="svc-tab-4">
+            <h3 class="svc-panel-title">Transcription tools</h3>
+            <p class="svc-example-label">Example</p>
+            <div class="svc-demo">
+            <div class="fig"><svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <path class="bars" d="M28 39v12 M38 35v20 M48 29v32 M58 33v24 M68 25v40 M78 19v52 M88 27v36 M98 33v24 M108 37v16 M118 31v28 M128 23v44 M138 17v56 M148 21v48 M158 29v32 M168 35v20 M178 27v36 M188 19v52 M198 15v60 M208 23v44 M218 31v28 M228 37v16 M238 33v24 M248 27v36 M258 21v48 M268 29v32 M278 35v20 M288 39v12"/>
+                <path class="soft" d="M28 92h260"/>
+                <rect class="fill-hi" x="28" y="89" width="118" height="6" rx="3"/>
+              </svg></div>
+            <div class="mini">
+              <div class="mini-row"><span>speaker 1</span><code>Let's start with the project update.</code></div>
+              <div class="mini-row"><span>speaker 2</span><code>The data is cleaned and ready for review.</code></div>
+            </div>
+            </div>
+            <p class="get-title">What you get</p>
+            <ul class="get">
+              <li>Text transcripts of your recordings</li>
+              <li>Speakers labelled where possible</li>
+              <li>Notes you can search</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="block" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="projects-title">Projects</h2>
+          <p>Source code for the data projects is public on GitHub. <a data-github href="#" hidden>See all my repositories</a></p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project" id="echo-notes">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <path class="bars" d="M28 39v12 M38 35v20 M48 29v32 M58 33v24 M68 25v40 M78 19v52 M88 27v36 M98 33v24 M108 37v16 M118 31v28 M128 23v44 M138 17v56 M148 21v48 M158 29v32 M168 35v20 M178 27v36 M188 19v52 M198 15v60 M208 23v44 M218 31v28 M228 37v16 M238 33v24 M248 27v36 M258 21v48 M268 29v32 M278 35v20 M288 39v12"/>
+                <path class="soft" d="M28 92h260"/>
+                <rect class="fill-hi" x="28" y="89" width="118" height="6" rx="3"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Echo Notes</h3>
+              <p class="status">Final-year project</p>
+              <p>Formally AMTDS, an academic meeting transcription and document generation system. It records a meeting, separates the speakers, and turns the transcript into searchable notes. Students, supervisors, committees and admins each get their own access, enforced by row-level security in a 15-table Supabase database.</p>
+              <ul class="cells">
+                <li>Flutter</li><li>FastAPI</li><li>Whisper</li><li>pyannote.audio</li><li>Gemini 1.5 Flash</li><li>Supabase</li>
+              </ul>
+              <div class="project-links"><a data-repo="echo-notes" href="#" hidden>Open Echo Notes</a></div>
+            </div>
+          </article>
+
+          <article class="project" id="light-novel">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <rect class="ink fill-surface" x="28" y="10" width="84" height="80" rx="4"/>
+                <path class="soft" d="M38 26h64 M38 36h64 M38 46h50 M38 56h64 M38 66h40"/>
+                <path class="ink" d="M128 50h40 M162 44l6 6l-6 6"/>
+                <rect class="ink fill-surface" x="184" y="10" width="104" height="36" rx="4"/>
+                <rect class="ink fill-surface" x="184" y="54" width="48" height="36" rx="4"/>
+                <rect class="ink fill-hi" x="240" y="54" width="48" height="36" rx="4"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Light novel to manga</h3>
+              <p class="status status-wip">In progress</p>
+              <p>Turns light novel text into manga panels. A language model splits the text into scenes, an image model draws them with consistent characters, and a layout step arranges the panels. Designed to run on an 8 GB GPU.</p>
+              <ul class="cells">
+                <li>Python</li><li>Qwen2.5-7B</li><li>FLUX.2 [klein]</li><li>LoRA</li>
+              </ul>
+              <div class="project-links"><a data-repo="light-novel-to-manga" href="#" hidden>Source on GitHub</a></div>
+            </div>
+          </article>
+
+          <article class="project" id="bridgepoint">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <rect class="ink fill-surface" x="28" y="8" width="260" height="84" rx="5"/>
+                <path class="ink" d="M28 24h260"/>
+                <circle class="fill-ink" cx="38" cy="16" r="2.5"/>
+                <circle class="fill-ink" cx="47" cy="16" r="2.5"/>
+                <circle class="fill-ink" cx="56" cy="16" r="2.5"/>
+                <path class="ink" d="M44 42h100"/>
+                <path class="soft" d="M44 52h80 M44 60h64"/>
+                <rect class="fill-hi" x="44" y="70" width="44" height="12" rx="3"/>
+                <rect class="ink fill-line" x="180" y="34" width="92" height="48" rx="3"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Bridgepoint Agency website</h3>
+              <p class="status">Website build</p>
+              <p>Website for Bridgepoint Agency, a medical tourism company in Istanbul. I built it and tested it for usability and performance, and it is hosted on Cloudflare Pages.</p>
+              <ul class="cells">
+                <li>Cloudflare Pages</li>
+              </ul>
+              <div class="project-links"><a data-repo="bridgepoint" href="#" hidden>Visit the site</a></div>
+            </div>
+          </article>
+
+          <article class="project" id="northwind">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <rect class="ink fill-surface" x="28" y="20" width="64" height="60" rx="4"/>
+                <path class="ink" d="M28 36h64"/>
+                <path class="soft" d="M36 48h48 M36 58h48 M36 68h30"/>
+                <path class="ink" d="M98 50h22 M114 44l6 6l-6 6"/>
+                <rect class="ink fill-surface" x="126" y="20" width="64" height="60" rx="4"/>
+                <path class="ink" d="M126 36h64"/>
+                <path class="soft" d="M134 48h48 M134 58h48 M134 68h30"/>
+                <path class="ink" d="M196 50h22 M212 44l6 6l-6 6"/>
+                <rect class="ink fill-surface" x="224" y="20" width="64" height="60" rx="4"/>
+                <rect class="fill-hi" x="225" y="21" width="62" height="14" rx="3"/>
+                <path class="soft" d="M232 48h48 M232 58h48 M232 68h30"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Northwind SQL pipeline</h3>
+              <p class="status status-done">Completed</p>
+              <p>Loads the Northwind sample database into SQLite, cleans it with SQL, and answers business questions with queries.</p>
+              <ul class="cells">
+                <li>SQL</li><li>SQLite</li><li>Python</li>
+              </ul>
+              <div class="project-links"><a data-repo="northwind-sql" href="#" hidden>Source on GitHub</a></div>
+            </div>
+          </article>
+
+          <article class="project" id="telco">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <path class="soft" d="M28 86h260"/>
+                <rect class="fill-line" x="40" y="56" width="28" height="30" rx="3"/>
+                <rect class="fill-line" x="80" y="44" width="28" height="42" rx="3"/>
+                <rect class="fill-line" x="120" y="50" width="28" height="36" rx="3"/>
+                <rect class="ink fill-hi" x="160" y="22" width="28" height="64" rx="3"/>
+                <rect class="fill-line" x="200" y="40" width="28" height="46" rx="3"/>
+                <rect class="fill-line" x="240" y="58" width="28" height="28" rx="3"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Telco customer churn analysis</h3>
+              <p class="status status-done">Completed</p>
+              <p>Finds which customers leave and what they have in common, then turns the findings into a short report.</p>
+              <ul class="cells">
+                <li>Python</li><li>pandas</li><li>Excel</li>
+              </ul>
+              <div class="project-links"><a data-repo="telco-churn" href="#" hidden>Source on GitHub</a></div>
+            </div>
+          </article>
+
+          <article class="project" id="sales">
+            <figure class="fig">
+              <svg viewBox="0 0 316 100" aria-hidden="true" focusable="false">
+                <rect class="ink fill-surface" x="28" y="8" width="76" height="28" rx="4"/>
+                <rect class="ink fill-surface" x="120" y="8" width="76" height="28" rx="4"/>
+                <rect class="ink fill-surface" x="212" y="8" width="76" height="28" rx="4"/>
+                <path class="ink" d="M36 18h26 M128 18h26 M220 18h26"/>
+                <path class="soft" d="M36 27h44 M128 27h44 M220 27h44"/>
+                <path class="soft" d="M28 92h260"/>
+                <path class="ink" style="stroke-width:2.5" d="M28 82L72 70L116 76L160 60L204 64L248 50L288 56"/>
+                <circle class="ink fill-hi" cx="248" cy="50" r="5"/>
+              </svg>
+            </figure>
+            <div class="project-body">
+              <h3>Sales and e-commerce dashboard</h3>
+              <p class="status status-done">Completed</p>
+              <p>Shows revenue, orders and top products in one view, so an owner can see what is selling.</p>
+              <ul class="cells">
+                <li>Python</li><li>Excel</li>
+              </ul>
+              <div class="project-links"><a data-repo="sales-dashboard" href="#" hidden>Source on GitHub</a></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="block" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="experience-title">Experience and education</h2>
+          <p>Newest first. Education sits on the left and work on the right.</p>
+        </div>
+        <div class="j-heads" aria-hidden="true">
+          <span class="j-head"><i class="j-key is-edu"></i>Education</span>
+          <span></span>
+          <span class="j-head"><i class="j-key is-exp"></i>Experience</span>
+        </div>
+        <ol class="journey">
+          <li class="exp">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Experience</span>
+              <p class="j-date">Current</p>
+              <h3>Freelance Python data analyst</h3>
+              <p class="j-place">Upwork</p>
+              <p class="j-text">Taking on data cleaning, analysis and reporting projects in Python and Excel.</p>
+            </div>
+          </li>
+          <li class="exp">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Experience</span>
+              <p class="j-date">August 2026</p>
+              <h3>Web developer</h3>
+              <p class="j-place">Bridgepoint Agency, Istanbul</p>
+              <p class="j-text">Built the website for a medical tourism company and tested it for usability and performance.</p>
+            </div>
+          </li>
+          <li class="edu">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Education</span>
+              <p class="j-date">2022 to 2026</p>
+              <h3>BS Software Engineering</h3>
+              <p class="j-place">Hazara University Mansehra</p>
+              <p class="j-text">Final-year project: Echo Notes, a meeting transcription and notes system. Also enrolled in CS50 AI.</p>
+            </div>
+          </li>
+          <li class="exp">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Experience</span>
+              <p class="j-date">June to August 2025</p>
+              <h3>Software engineering intern, ML and API</h3>
+              <p class="j-place">NovaXccelerate, through Hazara University</p>
+              <p class="j-text">Found the best audio-to-text API with speaker separation, integrated it through FastAPI, and tested the integration.</p>
+            </div>
+          </li>
+          <li class="edu">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Education</span>
+              <p class="j-date">2020 to 2021</p>
+              <h3>A Levels</h3>
+              <p class="j-place">Iqra A Levels</p>
+              <p class="j-text">Studied in Abbottabad.</p>
+            </div>
+          </li>
+          <li class="edu">
+            <span class="j-dot" aria-hidden="true"></span>
+            <div class="j-card">
+              <span class="j-tag">Education</span>
+              <p class="j-date">2016 to 2018</p>
+              <h3>O Levels</h3>
+              <p class="j-place">Burn Hall College for Boys</p>
+              <p class="j-text">Studied in Abbottabad.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+<section class="block" id="certificates" aria-labelledby="certificates-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="certificates-title">Certificates</h2>
+        </div>
+        <ul class="cert-list">
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16v4M17 18h4"/></svg></span>
+            <div>
+              <h3>Get Started with Databricks for Generative AI</h3>
+              <p>Databricks, in partnership with Simplilearn</p>
+              <p class="date">February 2026</p>
+              <a href="files/certificates/databricks-generative-ai.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>
+            <div>
+              <h3>Certified Data Analyst Foundations Course</h3>
+              <p>Udemy</p>
+              <p class="date">December 2025</p>
+              <a href="files/certificates/udemy-data-analyst-foundations.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 18a4 4 0 0 1-.5-7.97 5.5 5.5 0 0 1 10.6-1.5A4.5 4.5 0 0 1 17.5 18z"/></svg></span>
+            <div>
+              <h3>Introduction to Generative AI Studio</h3>
+              <p>Google Cloud, in partnership with Simplilearn</p>
+              <p class="date">December 2025</p>
+              <a href="files/certificates/generative-ai-studio.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 8h18v11H3zM9 8V5h6v3M3 13h18"/></svg></span>
+            <div>
+              <h3>Internship Program 2025, ML Engineer</h3>
+              <p>novaXccelerate</p>
+              <p class="date">May to August 2025</p>
+              <a href="files/certificates/novaxccelerate-internship-2025.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 10v4h3l7 4V6l-7 4zM17 9a4 4 0 0 1 0 6"/></svg></span>
+            <div>
+              <h3>The Fundamentals of Digital Marketing</h3>
+              <p>Google Digital Garage</p>
+              <p class="date">July 2019</p>
+              <a href="files/certificates/google-digital-garage.pdf" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+          <li class="cert">
+            <span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></svg></span>
+            <div>
+              <h3>Model United Nations</h3>
+              <p>NIMUN 2019, NUST Islamabad. Delegate for Mexico in DISEC</p>
+              <p class="date">January 2019</p>
+              <a href="files/certificates/nimun-2019.jpg" target="_blank" rel="noopener noreferrer">View certificate</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="block" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="contact-title">Contact</h2>
+          <p>Tell me what your data looks like and what you need from it. I'll reply with how I would approach it. Click my email or phone number to copy it.</p>
+        </div>
+        <ul class="contact-list" id="contact-list"></ul>
+        <p class="sr-only" id="copy-status" aria-live="polite"></p>
+        <p class="setup-note" id="setup-note" hidden>No contact links yet. Open script.js and fill in the CONFIG block at the top.</p>
+        <noscript><p>Contact links need JavaScript. Please enable it and reload.</p></noscript>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026. All rights reserved.</p>
+      <p>Software engineering and data analysis</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
